@@ -403,7 +403,7 @@ export default function ResultsPage() {
   // ── Render ────────────────────────────────────────────────────────────────
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white flex flex-col">
+    <div className="min-h-screen bg-zinc-950 text-white flex flex-col overflow-x-hidden">
       {/* Header */}
       <header className="border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
@@ -446,7 +446,7 @@ export default function ResultsPage() {
           <NoData onBack={() => router.push('/')} />
         </main>
       ) : (
-        <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-8 space-y-6">
+        <main className="flex-1 max-w-7xl mx-auto w-full px-5 sm:px-6 py-8 space-y-6">
 
           {/* Channel header */}
           <ChannelHeader channel={data.channel} videos={data.videos} />
